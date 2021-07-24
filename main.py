@@ -18,5 +18,9 @@ dp.register_callback_query_handler(callback_ru, lambda call: call.data == "ru")
 dp.register_callback_query_handler(callback_uz, lambda call: call.data == "uz")
 dp.register_callback_query_handler(callback_en, lambda call: call.data == "en")
 
+########## sub callbacks
+dp.register_callback_query_handler(callback_yes, lambda call: call.data == "y")
+dp.register_callback_query_handler(callback_no, lambda call: call.data == "n")
+
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates = True)
